@@ -1,6 +1,6 @@
 {
     "name":"Vite Based ColdBox Template",
-    "version":"6.17.0",
+    "version":"6.18.0",
     "author":"You",
     "location":"forgeboxStorage",
     "slug":"cbtemplate-vite",
@@ -17,9 +17,9 @@
     "shortDescription":"",
     "contributors":[],
     "ignore":[
-		"changelog.md",
+        "changelog.md",
         ".github/**"
-	],
+    ],
     "devDependencies":{
         "testbox":"^4.2.1+400",
         "commandbox-dotenv":"*",
