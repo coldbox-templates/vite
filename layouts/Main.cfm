@@ -1,5 +1,5 @@
 <cfoutput>
-<cfset manifest = fileExists( "includes/js/manifest.json" ) ? deserializeJSON( fileRead( "includes/js/manifest.json" ) ) : {} />
+<cfset manifest = loadViteManifest( force : false )/>
 <!doctype html>
 <html lang="en">
 <head>
