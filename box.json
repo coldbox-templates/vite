@@ -21,7 +21,7 @@
         ".github/**"
     ],
     "devDependencies":{
-        "testbox":"^4.2.1+400",
+        "testbox":"^5.0.0",
         "commandbox-dotenv":"*",
         "commandbox-cfconfig":"*",
         "commandbox-cfformat":"*"
