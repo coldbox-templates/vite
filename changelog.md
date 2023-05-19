@@ -9,6 +9,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+
+- Added `allowPublicKeyRetrieval=true` to the `db` connection string
+- Added missing bundle name and version in `.cfconfig.json` and `.env.example`
+
 ## [6.17.0] => 2023-MAR-20
 
 ### Added
