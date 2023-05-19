@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [7.2.0] - 2023-05-19
+
 ### Fixed
 
 - Added `allowPublicKeyRetrieval=true` to the `db` connection string
@@ -29,6 +31,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Cleanup of `tests` to new standards
 - Added routing conventions to make it easier for the cli to add routes.
 
-[Unreleased]: https://github.com/coldbox-templates/vite/compare/v7.0.0...HEAD
+[Unreleased]: https://github.com/coldbox-templates/vite/compare/v7.2.0...HEAD
 
-[7.0.0]: https://github.com/coldbox-templates/vite/compare/68ecd5508b9e66804d1f2aaf397ad3ba0385fef0...v7.0.0
+[7.2.0]: https://github.com/coldbox-templates/vite/compare/v7.0.0...v7.2.0
+
