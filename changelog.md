@@ -9,7 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [7.2.0] - 2023-06-14
+### Fixed
+
+- Gitignore updates so it doesn't ignore 'config/modules'
 
 ## [7.2.0] - 2023-05-19
 
@@ -36,4 +38,3 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [Unreleased]: https://github.com/coldbox-templates/vite/compare/v7.2.0...HEAD
 
 [7.2.0]: https://github.com/coldbox-templates/vite/compare/v7.2.0...v7.2.0
-
