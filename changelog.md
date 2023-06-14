@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [7.2.0] - 2023-06-14
+
 ## [7.2.0] - 2023-05-19
 
 ### Fixed
@@ -33,5 +35,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 [Unreleased]: https://github.com/coldbox-templates/vite/compare/v7.2.0...HEAD
 
-[7.2.0]: https://github.com/coldbox-templates/vite/compare/v7.0.0...v7.2.0
+[7.2.0]: https://github.com/coldbox-templates/vite/compare/v7.2.0...v7.2.0
 
