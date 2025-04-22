@@ -5,19 +5,13 @@
         "build": "vite build --emptyOutDir"
     },
     "dependencies": {
-        "vue": "^2.0.0"
+        "vue": "^3.5.13",
+		"tailwindcss": "^4.0.14"
     },
     "devDependencies": {
-        "@vue/compiler-sfc": "^3.0.5",
-        "autoprefixer": "^10.2.1",
-        "babel-eslint": "^10.0.1",
-        "eslint": "^7.32.0",
-        "eslint-config-prettier": "^8.1.0",
-        "eslint-loader": "^4.0.2",
-        "eslint-plugin-vue": "^7.6.0",
-        "postcss": "^8.2.4",
-        "tailwindcss": "^2.0.2",
-        "vite": "^2.0.0-beta.2",
-        "vite-plugin-vue2": "^1.0.2"
+        "vite": "^6.2.2",
+        "@vitejs/plugin-vue": "5.2.3",
+		"@tailwindcss/vite": "^4.0.14",
+		"coldbox-vite-plugin": "^3.0.2"
     }
 }
