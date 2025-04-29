@@ -1,6 +1,6 @@
 # Vite Application Template
 
-This template is a fork of the `default` template but based on `Vite` as your asset manager.  It also leverages vue.js and tailwind.
+This template is a fork of the `default` template but based on `Vite` as your asset manager.  It also leverages VueJS and Tailwind.
 
 
 ## Quick Installation
@@ -26,7 +26,6 @@ You will find a `package.json` and a `vite.config.js` in the root of this templa
 ```bash
 + resources
 	+ /js
-	+ /saas
 	+ /css
 ```
 
