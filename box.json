@@ -1,6 +1,6 @@
 {
     "name":"Vite Based ColdBox Template",
-    "version":"8.0.0",
+    "version":"8.0.1",
     "author":"You",
     "location":"forgeboxStorage",
     "slug":"cbtemplate-vite",
@@ -19,9 +19,8 @@
     "ignore":[],
     "devDependencies":{
         "testbox":"^6.0.0",
-        "commandbox-boxlang":"*",
         "commandbox-cfformat":"*",
-        "vite-helpers":"^1.0.0"
+        "vite-helpers":"^2.0.0"
     },
     "installPaths":{
         "coldbox":"coldbox/",
