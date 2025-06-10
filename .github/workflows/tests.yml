@@ -11,43 +11,46 @@ jobs:
       DB_USER: root
       DB_PASSWORD: root
       WEB_PORT: 60299
+      JDK_VERSION: "21"
     strategy:
       fail-fast: false
       matrix:
         include:
-          - cfengine: "boxlang"
+          - cfengine: "boxlang@1"
             jdkVersion: "21"
             engineModules: "bx-compat-cfml,bx-esapi"
           - cfengine: "lucee@5"
             jdkVersion: "11"
-            engineModules:
+            engineModules: ""
           - cfengine: "lucee@6"
             jdkVersion: "21"
-            engineModules:
-          - cfengine: "adobe@2021"
-            jdkVersion: "11"
-            engineModules:
+            engineModules: ""
           - cfengine: "adobe@2023"
             jdkVersion: "21"
-            engineModules:
+            engineModules: ""
+          - cfengine: "adobe@2025"
+            jdkVersion: "21"
+            engineModules: ""
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
-
-      # Not Needed in this module
-      - name: Setup Database and Fixtures
-        run: |
-          sudo systemctl start mysql.service
-          mysql -u${{ env.DB_USER }} -p${{ env.DB_PASSWORD }} -e 'CREATE DATABASE coldbox;'
 
       - name: Setup Java
         uses: actions/setup-java@v4
         with:
           distribution: "temurin"
-          java-version: ${{ matrix.jdkVersion }}
+          java-version: ${{ env.JDK_VERSION }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
 
       - name: Setup CommandBox CLI
         uses: Ortus-Solutions/setup-commandbox@v2.0.1
+        with:
+          install: testbox-cli,commandbox-boxlang
 
       - name: Setup Environment For Testing Process
         run: |
@@ -60,21 +63,18 @@ jobs:
           printf "DB_USER=${{ env.DB_USER }}\n" >> .env
           printf "DB_PASSWORD=${{ env.DB_PASSWORD }}\n" >> .env
           printf "DB_CLASS=com.mysql.cj.jdbc.Driver\n" >> .env
-          printf "DB_BUNDLEVERSION=8.0.19\n" >> .env
+          printf "DB_BUNDLEVERSION=8.0.33\n" >> .env
           printf "DB_BUNDLENAME=com.mysql.cj\n" >> .env
 
-      - name: Install Dependencies
+      - name: Install & Build Dependencies
         run: |
+          npm install --no-audit --no-fund --prefer-offline
+          npm run build
           box install
 
       - name: Start ${{ matrix.cfengine }} Server
         run: |
           box server set web.http.port=${{ env.WEB_PORT }}
-          box server set app.cfengine=${{ matrix.cfengine }}
-          if [ -n "${{ matrix.engineModules }}" ]; then
-            echo "Installing Engine Modules: ${{ matrix.engineModules }}"
-            box server set scripts.onServerInitialInstall="install ${{ matrix.engineModules }}"
-          fi
           box server start --debug
           curl http://127.0.0.1:${{ env.WEB_PORT }}
 
@@ -99,7 +99,7 @@ jobs:
             tests/results/**/*
 
       - name: Show Server Log On Failures
-        if: ${{ failure() }}
+        if: ${{ always() }}
         run: |
           box server log
 
@@ -110,4 +110,3 @@ jobs:
           name: Failure Debugging Info - ${{ matrix.cfengine }}
           path: |
             .engine/**/logs/*
-            .engine/**/WEB-INF/cfusion/logs/*
