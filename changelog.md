@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [8.0.1] - 2025-06-11
+
 ### Added
 
 - Upgrade to new vite helpers
@@ -42,6 +44,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Cleanup of `tests` to new standards
 - Added routing conventions to make it easier for the cli to add routes.
 
-[unreleased]: https://github.com/coldbox-templates/vite/compare/v7.4.0...HEAD
+[unreleased]: https://github.com/coldbox-templates/vite/compare/v8.0.1...HEAD
+[8.0.1]: https://github.com/coldbox-templates/vite/compare/v7.4.0...v8.0.1
 [7.4.0]: https://github.com/coldbox-templates/vite/compare/v7.2.0...v7.4.0
 [7.2.0]: https://github.com/coldbox-templates/vite/compare/v7.2.0...v7.2.0
