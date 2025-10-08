@@ -19,8 +19,10 @@
     "ignore":[],
     "devDependencies":{
         "testbox":"^6.0.0",
+        "vite-helpers":"^2.0.0",
         "commandbox-cfformat":"*",
-        "vite-helpers":"^2.0.0"
+		"coldbox-cli":"*",
+		"testbox-cli":"*"
     },
     "installPaths":{
         "coldbox":"coldbox/",
