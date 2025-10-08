@@ -28,7 +28,7 @@
         "vite-helpers":"modules/vite-helpers/"
     },
     "dependencies":{
-        "coldbox":"^7.0.0"
+        "coldbox":"be"
     },
     "scripts":{
         "postInstall":"pathExists .env || cp .env.example .env && package set ignore=[]",
