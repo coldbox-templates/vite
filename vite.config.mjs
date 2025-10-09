@@ -8,7 +8,7 @@ export default defineConfig({
 		vue(),
 		tailwindcss(),
 		coldbox({
-			input: ["resources/assets/css/app.css", "resources/assets/js/app.js"],
+			input: [ "resources/assets/css/app.css", "resources/assets/js/app.js" ],
 			refresh: true
 		})
 	],

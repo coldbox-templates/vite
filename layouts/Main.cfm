@@ -12,10 +12,12 @@
 
 	<!---Base URL --->
 	<base href="#event.getHTMLBaseURL()#" />
+	<!--- Vite Assets --->
 	#vite( [ "resources/assets/css/app.css", "resources/assets/js/app.js" ] )#
 </head>
 <body>
 	<div id="app">
+		<!--- Vue App --->
 		<Hello />
 	</div>
 </body>
