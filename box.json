@@ -16,20 +16,27 @@
     "bugs":"",
     "shortDescription":"",
     "contributors":[],
-    "ignore":[],
+    "ignore":[
+		"changelog.md",
+		".github/ISSUE_TEMPLATE/*",
+		".github/workflows/*",
+		".github/CONTRIBUTING.md",
+		".github/FUNDING.YML",
+		".github/PULL_REQUEST_TEMPLATE.md"
+	],
     "devDependencies":{
         "testbox":"^6.0.0",
-        "vite-helpers":"^2.0.0",
         "commandbox-cfformat":"*",
 		"coldbox-cli":"*",
 		"testbox-cli":"*"
     },
     "installPaths":{
-        "coldbox":"coldbox/",
+		"coldbox":"coldbox/",
         "testbox":"testbox/",
         "vite-helpers":"modules/vite-helpers/"
     },
     "dependencies":{
+		"vite-helpers":"^2.0.0",
         "coldbox":"be"
     },
     "scripts":{
