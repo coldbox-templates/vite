@@ -13,6 +13,9 @@ docker/.db/**
 logs/**
 tests/results/**
 
+# Vite Assets
+includes/build/**
+
 # npm
 **/node_modules/*
 npm-debug.log
