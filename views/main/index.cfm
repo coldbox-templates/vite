@@ -39,7 +39,7 @@
 			<span class="badge badge-danger">index()</span>
 		</p>
 		<ul>
-			<cfloop list="#getSetting("RegisteredHandlers")#" index="handler">
+			<cfloop collection="#getSetting( "RegisteredHandlers" )#" item="handler">
 			<li><a href="#event.buildLink( handler )#">#handler#</a></li>
 			</cfloop>
 		</ul>
